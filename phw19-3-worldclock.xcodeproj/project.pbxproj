@@ -13,6 +13,13 @@
 		F352B4092B4E802B00664485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F352B4072B4E802B00664485 /* Main.storyboard */; };
 		F352B40B2B4E802C00664485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F352B40A2B4E802C00664485 /* Assets.xcassets */; };
 		F352B40E2B4E802C00664485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F352B40C2B4E802C00664485 /* LaunchScreen.storyboard */; };
+		F352B4172B4E812C00664485 /* WorldClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4162B4E812C00664485 /* WorldClockTableViewCell.swift */; };
+		F352B4192B4E81DD00664485 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4182B4E81DD00664485 /* City.swift */; };
+		F352B41B2B4E84A100664485 /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B41A2B4E84A100664485 /* WorldClockViewController.swift */; };
+		F352B41E2B4E858E00664485 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B41C2B4E858E00664485 /* CityViewController.swift */; };
+		F352B41F2B4E858E00664485 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B41D2B4E858E00664485 /* CityTableViewCell.swift */; };
+		F3B8BEF42B55190A00410447 /* varlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8BEF32B55190A00410447 /* varlet.swift */; };
+		F3B8BEF62B56703F00410447 /* WorldClockzhTWTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8BEF52B56703F00410447 /* WorldClockzhTWTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		F352B40A2B4E802C00664485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F352B40D2B4E802C00664485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F352B40F2B4E802C00664485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F352B4162B4E812C00664485 /* WorldClockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldClockTableViewCell.swift; sourceTree = "<group>"; };
+		F352B4182B4E81DD00664485 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		F352B41A2B4E84A100664485 /* WorldClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
+		F352B41C2B4E858E00664485 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		F352B41D2B4E858E00664485 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		F3B8BEF32B55190A00410447 /* varlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = varlet.swift; sourceTree = "<group>"; };
+		F3B8BEF52B56703F00410447 /* WorldClockzhTWTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockzhTWTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		F352B4002B4E802B00664485 /* phw19-3-worldclock */ = {
 			isa = PBXGroup;
 			children = (
+				F352B4152B4E811700664485 /* WorldClockController */,
 				F352B4012B4E802B00664485 /* AppDelegate.swift */,
 				F352B4032B4E802B00664485 /* SceneDelegate.swift */,
 				F352B4052B4E802B00664485 /* ViewController.swift */,
@@ -65,6 +80,20 @@
 				F352B40F2B4E802C00664485 /* Info.plist */,
 			);
 			path = "phw19-3-worldclock";
+			sourceTree = "<group>";
+		};
+		F352B4152B4E811700664485 /* WorldClockController */ = {
+			isa = PBXGroup;
+			children = (
+				F352B4182B4E81DD00664485 /* City.swift */,
+				F352B4162B4E812C00664485 /* WorldClockTableViewCell.swift */,
+				F3B8BEF52B56703F00410447 /* WorldClockzhTWTableViewCell.swift */,
+				F352B41A2B4E84A100664485 /* WorldClockViewController.swift */,
+				F352B41D2B4E858E00664485 /* CityTableViewCell.swift */,
+				F352B41C2B4E858E00664485 /* CityViewController.swift */,
+				F3B8BEF32B55190A00410447 /* varlet.swift */,
+			);
+			path = WorldClockController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F352B41B2B4E84A100664485 /* WorldClockViewController.swift in Sources */,
+				F3B8BEF62B56703F00410447 /* WorldClockzhTWTableViewCell.swift in Sources */,
 				F352B4062B4E802B00664485 /* ViewController.swift in Sources */,
+				F3B8BEF42B55190A00410447 /* varlet.swift in Sources */,
 				F352B4022B4E802B00664485 /* AppDelegate.swift in Sources */,
 				F352B4042B4E802B00664485 /* SceneDelegate.swift in Sources */,
+				F352B4192B4E81DD00664485 /* City.swift in Sources */,
+				F352B4172B4E812C00664485 /* WorldClockTableViewCell.swift in Sources */,
+				F352B41F2B4E858E00664485 /* CityTableViewCell.swift in Sources */,
+				F352B41E2B4E858E00664485 /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
