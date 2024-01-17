@@ -20,6 +20,7 @@
 		F352B41F2B4E858E00664485 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B41D2B4E858E00664485 /* CityTableViewCell.swift */; };
 		F3B8BEF42B55190A00410447 /* varlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8BEF32B55190A00410447 /* varlet.swift */; };
 		F3B8BEF62B56703F00410447 /* WorldClockzhTWTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8BEF52B56703F00410447 /* WorldClockzhTWTableViewCell.swift */; };
+		F3B8BEF82B56801500410447 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F3B8BEF72B56801500410447 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F352B41D2B4E858E00664485 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		F3B8BEF32B55190A00410447 /* varlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = varlet.swift; sourceTree = "<group>"; };
 		F3B8BEF52B56703F00410447 /* WorldClockzhTWTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockzhTWTableViewCell.swift; sourceTree = "<group>"; };
+		F3B8BEF72B56801500410447 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		F352B3F52B4E802B00664485 = {
 			isa = PBXGroup;
 			children = (
+				F3B8BEF72B56801500410447 /* .gitignore */,
 				F352B4002B4E802B00664485 /* phw19-3-worldclock */,
 				F352B3FF2B4E802B00664485 /* Products */,
 			);
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B8BEF82B56801500410447 /* .gitignore in Resources */,
 				F352B40E2B4E802C00664485 /* LaunchScreen.storyboard in Resources */,
 				F352B40B2B4E802C00664485 /* Assets.xcassets in Resources */,
 				F352B4092B4E802B00664485 /* Main.storyboard in Resources */,

@@ -7,17 +7,14 @@
 
 import UIKit
 
-
-
-
 class WorldClockzhTWTableViewCell: UITableViewCell {
     @IBOutlet weak var relativeDateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var relativeHoursLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
     @IBOutlet weak var cityZhTWLabel: UILabel!
     
+    @IBOutlet weak var cityZhTWButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,4 +26,7 @@ class WorldClockzhTWTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
 }
+
+

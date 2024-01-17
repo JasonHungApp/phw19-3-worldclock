@@ -11,7 +11,7 @@ import Foundation
 let cityMapping: [String: String] = [
     "Abidjan": "阿必尚",
     "Accra": "阿克拉",
-    "Addis Ababa": "亞的斯亞貝巴",
+    "Addis Ababa": "阿迪斯阿貝巴",
     "Algiers": "阿爾及爾",
     "Asmara": "阿斯馬拉",
     "Bamako": "巴馬科",

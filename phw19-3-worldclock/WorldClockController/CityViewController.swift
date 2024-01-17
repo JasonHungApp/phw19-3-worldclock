@@ -29,6 +29,8 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+        overrideUserInterfaceStyle = .dark
+
         
         //準備時區資料
         setCities()
@@ -59,16 +61,9 @@ class CityViewController: UIViewController {
     
     func setCities(){
         // Build array of city struct   // 建立城市結構體的陣列
-        //print("TimeZone.knownTimeZoneIdentifiers = ")
-        //print(TimeZone.knownTimeZoneIdentifiers)
-        
         for knownTimeZoneIdentifier in TimeZone.knownTimeZoneIdentifiers {
-            
-            //print(knownTimeZoneIdentifier)
             let city = City(knownTimeZoneIdentifier: knownTimeZoneIdentifier)
             cities.append(city)
-            
-           print( String(knownTimeZoneIdentifier.split(separator: "/").last!).replacingOccurrences(of: "_", with: " "))
         }
         
         // Build dictionary of timeZone city // 建立時區字典

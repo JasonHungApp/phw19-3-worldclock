@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class WorldClockViewController: UIViewController {
     var cities = [City]() {
@@ -29,6 +30,11 @@ class WorldClockViewController: UIViewController {
                
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
+        // 修改 Navigation Bar 背景色
+        navigationController?.navigationBar.barTintColor = UIColor.darkGray.withAlphaComponent(0.8)  // 使用您想要的顏色
+        navigationController?.navigationBar.tintColor = UIColor.orange  // 設定返回按鈕和其他元素的顏色
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]  // 設定標題的顏色
+        
         
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = .gray
@@ -57,6 +63,25 @@ class WorldClockViewController: UIViewController {
              tableView.insertRows(at: [indexPath], with: .automatic)
          }
     }
+    
+    @IBAction func cityWiki(_ sender: UIButton) {
+       
+        if let url = URL(string: "https://zh.wikipedia.org/zh-tw/\(sender.titleLabel?.text ?? "")") {
+            let safariViewController = SFSafariViewController(url: url)
+            
+            // 設定瀏覽器視圖的樣式
+            safariViewController.preferredControlTintColor = UIColor.white
+            safariViewController.preferredBarTintColor = UIColor.black  // 這是設定瀏覽器的背景色
+            
+            // 以 modal 形式呈現
+            safariViewController.modalPresentationStyle = .pageSheet  // 使用 .fullScreen 可以覆蓋整個螢幕，而 .overFullScreen 可以保留底層視圖
+            
+            safariViewController.delegate = self
+            present(safariViewController, animated: true, completion: nil)
+        }
+    }
+    
+    
 }
 
 
@@ -73,7 +98,19 @@ extension WorldClockViewController: UITableViewDataSource {
         let city = cities[indexPath.row]
         cell.cityLabel.text = city.cityName
         cell.cityZhTWLabel.text = city.cityNameZhTW
+        cell.cityZhTWButton.titleLabel?.text = city.cityNameZhTW
+
         cell.relativeDateLabel.text = city.relativeDate
+        if city.relativeDate == "Today" {
+            cell.relativeDateLabel.backgroundColor = UIColor.clear
+
+        }else{
+            cell.relativeDateLabel.backgroundColor = UIColor.gray.withAlphaComponent(0.6)
+            cell.relativeDateLabel.layer.cornerRadius = 10
+            cell.relativeDateLabel.clipsToBounds = true
+            cell.relativeDateLabel.layer.masksToBounds = true
+        }
+        
         cell.relativeHoursLabel.text = city.relativeHours
         if tableView.isEditing {
             cell.timeLabel.isHidden = true
@@ -81,6 +118,9 @@ extension WorldClockViewController: UITableViewDataSource {
             cell.timeLabel.text = city.localTime
             cell.timeLabel.isHidden = false
         }
+        
+       // cell.backgroundColor = UIColor.blue
+        
         return cell
     }
     
@@ -126,4 +166,11 @@ extension WorldClockViewController: UITableViewDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 }
+
+
+extension WorldClockViewController: SFSafariViewControllerDelegate{
+    
+}
+

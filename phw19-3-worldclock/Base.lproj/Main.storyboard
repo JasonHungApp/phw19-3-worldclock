@@ -8,21 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="phw19_3_worldclock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="121" y="-34"/>
-        </scene>
         <!--World Clock-->
         <scene sceneID="oqK-sz-ftS">
             <objects>
@@ -114,7 +99,7 @@
                                                     <rect key="frame" x="20" y="8" width="353" height="112"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-Tv-Tny">
-                                                            <rect key="frame" x="0.0" y="5" width="112" height="102"/>
+                                                            <rect key="frame" x="0.0" y="5" width="186.66666666666666" height="102"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="POe-dg-DPS">
                                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="20.333333333333332"/>
@@ -134,20 +119,45 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taipei" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-My-LB1">
-                                                                    <rect key="frame" x="0.0" y="27.666666666666668" width="112" height="33.666666666666657"/>
+                                                                    <rect key="frame" x="0.0" y="27.333333333333332" width="186.66666666666666" height="33.333333333333343"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台北" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDK-HH-u5N">
-                                                                    <rect key="frame" x="0.0" y="68.333333333333329" width="112" height="33.666666666666671"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-hW-1Hu">
+                                                                    <rect key="frame" x="0.0" y="67.666666666666671" width="186.66666666666666" height="34.333333333333329"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台北" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDK-HH-u5N">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="34.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-ZG-ywb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="34.333333333333336"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="cityWiki:" destination="qZU-i7-0rS" eventType="touchUpInside" id="SXq-zP-TBs"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="KDK-HH-u5N" secondAttribute="bottom" id="7Hv-jr-Bdb"/>
+                                                                        <constraint firstAttribute="height" constant="34.329999999999998" id="7Rc-qb-dWH"/>
+                                                                        <constraint firstItem="KDK-HH-u5N" firstAttribute="top" secondItem="1s7-hW-1Hu" secondAttribute="top" id="MkR-0s-ouR"/>
+                                                                        <constraint firstItem="fy5-ZG-ywb" firstAttribute="top" secondItem="1s7-hW-1Hu" secondAttribute="top" id="ReR-oV-TPh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="fy5-ZG-ywb" secondAttribute="trailing" id="TP5-0U-bo3"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="KDK-HH-u5N" secondAttribute="trailing" id="g7J-jh-0M1"/>
+                                                                        <constraint firstItem="fy5-ZG-ywb" firstAttribute="leading" secondItem="1s7-hW-1Hu" secondAttribute="leading" id="ukk-YI-DGJ"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="fy5-ZG-ywb" secondAttribute="bottom" id="yK8-NV-DSR"/>
+                                                                        <constraint firstItem="KDK-HH-u5N" firstAttribute="leading" secondItem="1s7-hW-1Hu" secondAttribute="leading" id="ySb-jC-2On"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="KDK-HH-u5N" secondAttribute="trailing" id="i86-QA-0Xj"/>
                                                                 <constraint firstAttribute="trailing" secondItem="jmE-My-LB1" secondAttribute="trailing" id="nIw-Yg-vDE"/>
                                                             </constraints>
                                                         </stackView>
@@ -175,6 +185,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cityLabel" destination="jmE-My-LB1" id="tYG-y0-2Kh"/>
+                                            <outlet property="cityZhTWButton" destination="fy5-ZG-ywb" id="08p-WC-vbo"/>
                                             <outlet property="cityZhTWLabel" destination="KDK-HH-u5N" id="Rdf-ek-9Kg"/>
                                             <outlet property="relativeDateLabel" destination="0x8-NV-agW" id="C92-JE-ZYR"/>
                                             <outlet property="relativeHoursLabel" destination="CxW-9S-8mv" id="VE2-g5-9rT"/>
